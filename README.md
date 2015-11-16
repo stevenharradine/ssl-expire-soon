@@ -6,6 +6,7 @@ Will your ssl certs expire soon?
 ### Add list of sites to `domains.sh`
 
 DOMAINS=("google.com"
+
          "www.google.com")
 
 ### Run the script
@@ -15,6 +16,7 @@ DOMAINS=("google.com"
 ```
 
 `$days_till_expirary` - How many days till the certificate expires to warn you
+
 `$script_path` - Path to the script to execute if the cert is out side the expirary window
 
 #### Example
