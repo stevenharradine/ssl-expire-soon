@@ -1,2 +1,19 @@
 #!/usr/bin/env bash
-DOMAINS=("google.com")
+DOMAINS=(
+  "telus.com"
+  "selfserve.publicmobile.ca"
+  "telusreferral.com"
+  "telusreferral.com"
+  "webmail.exchange.telus.com"
+  "referral.telus.com"
+  "advocacy.telus.com"
+  "www.telussante.co"
+  "cloud.agilit.telus.com"
+  "www.telusreferral.com"
+  "unsubscribe.telus.com/en/survey.php"
+  "wiki.partners.telus.com"
+  "manager.telus.com"
+  "staging.telussecurecontracts.com"
+  "smisstaging.telus.com"
+  "gestion.webconcepteur.com"
+)

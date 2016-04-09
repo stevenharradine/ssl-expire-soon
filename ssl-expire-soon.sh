@@ -4,7 +4,10 @@ source ./domains.sh
 
 for DOMAIN in "${DOMAINS[@]}"
 do
- expire_in_seconds=$(($(date --date="$(openssl s_client -connect $DOMAIN:443 < /dev/null 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | awk -F\= '{print $2}')" +%s)-$(date +%s)))
+ cert_expiry_date=$(openssl s_client -connect $DOMAIN:443 < /dev/null 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | awk -F\= '{print $2}')
+ cert_expiry_epoc=$(date --date="$cert_expiry_date" +%s)
+ now_epoc=$(date +%s)
+ expire_in_seconds=$(($cert_expiry_epoc-$now_epoc))
  expire_in_days=`expr $expire_in_seconds / 60 / 60 / 24`
  valid_beyond_check_range=true
 
