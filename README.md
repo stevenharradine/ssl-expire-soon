@@ -4,10 +4,12 @@ Will your ssl certs expire soon?
 ## Usage
 
 ### Add list of sites to `domains.sh`
-
-DOMAINS=("google.com"
-
-         "www.google.com")
+```
+DOMAINS=(
+  "google.com"
+  "www.google.com"
+)
+```
 
 ### Run the script
 
