@@ -31,4 +31,4 @@ do
 done
 
 buffered_slack="$buffered_slack\nScan complete"
-curl -X POST --data-urlencode "payload={\"channel\": \"#sandbox\", \"username\": \"SSL Expire Soon\", \"text\": \"$buffered_slack\"}" https://hooks.slack.com/services/$3
+curl -X POST --data-urlencode "payload={\"username\": \"SSL Expire Soon\", \"text\": \"$buffered_slack\"}" https://hooks.slack.com/services/$3
