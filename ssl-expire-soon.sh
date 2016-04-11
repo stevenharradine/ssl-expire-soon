@@ -26,6 +26,8 @@ do
 
  if [ $valid_beyond_check_range = false ]; then
   eval $2 $DOMAIN $expire_in_days
-  curl -X POST --data-urlencode 'payload={"channel": "#sandbox", "username": "SSL Expire Soon", "text": "$DOMAIN will expire in $2 days"}' https://hooks.slack.com/services/$3
+  curl -X POST --data-urlencode "payload={\"channel\": \"#sandbox\", \"username\": \"SSL Expire Soon\", \"text\": \"$DOMAIN will expire in $expire_in_days days\"}" https://hooks.slack.com/services/$3
  fi
 done
+
+curl -X POST --data-urlencode "payload={\"channel\": \"#sandbox\", \"username\": \"SSL Expire Soon\", \"text\": \"Scan complete\"}" https://hooks.slack.com/services/$3
